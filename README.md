@@ -78,14 +78,37 @@ Wazuh recorded changes to file attributes, including MD5, SHA-1 and SHA-256 chec
 - Investigating file modification alerts.
 - Basic troubleshooting of agent connectivity and configuration.
 
-## 6. Project Evidence
+## # 6. Project Evidence
 
-Screenshots and supporting documentation will be added to the following folders:
+The following screenshots demonstrate the implementation and testing of the Wazuh Security Monitoring Lab.
 
-- `screenshots/`
+### 6.1 Wazuh Dashboard Overview
+![Wazuh Dashboard Overview](screenshots/Wazuh_Dashboard_Overview.png)
+
+### 6.2 Wazuh Agent Active Status
+![Wazuh Agent Active Status](screenshots/Wazuh_Agent_Active_Status.png)
+
+### 6.3 Docker Containers
+![Wazuh Docker Containers](screenshots/Wazuh_Docker_Containers.png)
+
+### 6.4 Security Configuration Assessment (SCA)
+![Wazuh SCA Assessment](screenshots/Wazuh_SCA_Assessment.png)
+
+### 6.5 File Integrity Monitoring (FIM)
+![Wazuh FIM File Modification](screenshots/Wazuh_FIM_File_Modification.png)
+
+### 6.6 Security Events
+![Wazuh Security Events](screenshots/Wazuh_Security_Events.png)
+
+### 6.7 Vulnerability Inventory
+![Wazuh Vulnerability Inventory](screenshots/Wazuh_Vulnerability_Inventory.png)
+
+### 6.8 Vulnerability CVE Details
+![Wazuh Vulnerability CVE Details](screenshots/Wazuh_Vulnerability_CVE_Details.png)
+
+Supporting documentation and configuration files are maintained in:
 - `documentation/`
 - `configuration/`
-
 ## 7. Limitations and Future Improvements
 
 - Expand monitoring to additional Windows security events.
