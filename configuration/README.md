@@ -8,7 +8,7 @@
 
 \- Deployment method: Docker Compose
 
-\- Compose project: single-node
+\- Compose project: `single-node`
 
 \- Wazuh version: 4.14.0
 
@@ -24,11 +24,11 @@
 
 |---|---|
 
-| Wazuh Manager | wazuh.manager |
+| Wazuh Manager | `wazuh.manager` |
 
-| Wazuh Indexer | wazuh.indexer |
+| Wazuh Indexer | `wazuh.indexer` |
 
-| Wazuh Dashboard | wazuh.dashboard |
+| Wazuh Dashboard | `wazuh.dashboard` |
 
 
 
@@ -40,37 +40,17 @@
 
 |---|---|
 
-| 443 | Dashboard HTTPS access |
+| 443 | Wazuh Dashboard HTTPS access |
 
 | 1514 | Wazuh agent communication |
 
-| 1515 | Agent enrollment |
+| 1515 | Wazuh agent enrollment |
 
 | 55000 | Wazuh API |
 
-| 9200 | Indexer API |
+| 9200 | Wazuh Indexer API |
 
 
 
-\## 4. Original Configuration
-
-
-
-The original Docker Compose configuration is maintained locally at:
-
-
-
-`C:\\Users\\DEVAPRIYA\\wazuh-docker\\single-node\\docker-compose.yml`
-
-
-
-\## 5. Security Considerations
-
-
-
-The original configuration is not included in this public repository because it may contain passwords or other sensitive values.
-
-
-
-Credentials, API keys, private certificates, and other secrets must never be committed to a public repository.
+These are the configured service ports in the lab deployment. Actual accessibility depends on Docker
 

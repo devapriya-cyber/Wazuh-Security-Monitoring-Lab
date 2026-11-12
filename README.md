@@ -20,10 +20,10 @@ The lab was configured using two laptops.
 
 ## 3. Tools and Technologies
 
-- Wazuh 4.14
+- Wazuh Manager, Indexer and Dashboard 4.14.0
 - Docker
 - Windows 11
-- Wazuh Agent
+- Wazuh Agent 4.14.6
 - Security Configuration Assessment (SCA)
 - File Integrity Monitoring (FIM)
 
@@ -46,11 +46,11 @@ Recorded lab result:
 - Passed checks: 123
 - Failed checks: 350
 
-These results represent the observed assessment at the time of testing.
+Failed checks indicate security policy checks that did not pass at the time of assessment. They do not automatically represent confirmed vulnerabilities. Each failed check requires individual review.
 
 ### 4.3 File Integrity Monitoring
 
-- Configured real-time monitoring for `C:\Users\Public`.
+- Tested real-time File Integrity Monitoring by creating and modifying a file in `C:\Users\Public`.
 - Created a test file named `fim_test.txt`.
 - Modified the file to generate a security event.
 - Verified the resulting alert in the Wazuh Dashboard.
@@ -68,17 +68,23 @@ These results represent the observed assessment at the time of testing.
 
 Wazuh recorded changes to file attributes, including MD5, SHA-1 and SHA-256 checksums.
 
+### 4.4 Vulnerability Detection
+
+- Explored the Wazuh Vulnerability Detection module.
+- Reviewed vulnerability records associated with the Windows endpoint.
+- Opened CVE details to understand the reported vulnerability information.
+
 ## 5. What I Learned
 
 - Basic SIEM architecture and security event monitoring.
 - Deploying Wazuh using Docker.
 - Connecting a Windows endpoint to a central manager.
 - Reviewing Security Configuration Assessment results.
-- Configuring File Integrity Monitoring.
+- Testing File Integrity Monitoring and investigating file modification alerts.
 - Investigating file modification alerts.
 - Basic troubleshooting of agent connectivity and configuration.
 
-## # 6. Project Evidence
+## 6. Project Evidence
 
 The following screenshots demonstrate the implementation and testing of the Wazuh Security Monitoring Lab.
 

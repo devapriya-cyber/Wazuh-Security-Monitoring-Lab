@@ -20,13 +20,15 @@ This project demonstrates a hands-on security monitoring lab using Wazuh. It was
 
 | SIEM Platform | Wazuh |
 
-| Wazuh Version | 4.14.0 |
+| Wazuh Manager, Indexer and Dashboard | 4.14.0 |
 
-| Deployment Method | Docker |
+| Deployment Method | Docker Compose |
 
 | Container Environment | Docker Desktop with WSL 2 |
 
-| Operating System | Windows 11 |
+| Server Operating System | Windows 11 |
+
+| Monitored Endpoint Operating System | Windows 11 |
 
 | Endpoint Agent | Wazuh Agent 4.14.6 |
 
@@ -38,7 +40,7 @@ This project demonstrates a hands-on security monitoring lab using Wazuh. It was
 
 
 
-The lab consists of a Wazuh server stack and a monitored Windows endpoint.
+The lab was configured using two laptops: one hosting the Wazuh server stack and another serving as the monitored Windows endpoint.
 
 
 
@@ -62,6 +64,10 @@ A Windows 11 endpoint was connected to the Wazuh Manager using the Wazuh Agent.
 
 
 
+The agent communicates with the manager to send endpoint monitoring data for centralized security analysis.
+
+
+
 \## 4. Deployment Overview
 
 
@@ -74,11 +80,11 @@ A Windows 11 endpoint was connected to the Wazuh Manager using the Wazuh Agent.
 
 4\. Accessed the Wazuh Dashboard through HTTPS.
 
-5\. Installed and configured the Wazuh Agent on a Windows endpoint.
+5\. Installed the Wazuh Agent on a separate Windows endpoint.
 
-6\. Connected the endpoint to the Wazuh Manager.
+6\. Configured the agent to communicate with the Wazuh Manager.
 
-7\. Verified agent connectivity and monitoring functionality.
+7\. Verified agent connectivity and monitoring functionality in the dashboard.
 
 
 
@@ -90,57 +96,5 @@ The following capabilities were explored and tested:
 
 
 
-\- \*\*File Integrity Monitoring (FIM):\*\* Monitored file changes and verified modification alerts.
-
-\- \*\*Security Configuration Assessment (SCA):\*\* Reviewed security configuration checks and compliance results.
-
-\- \*\*Vulnerability Detection:\*\* Examined detected vulnerabilities and associated CVE information.
-
-\- \*\*Security Event Monitoring:\*\* Reviewed security events through the Wazuh Dashboard.
-
-
-
-\## 6. Verification
-
-
-
-The following checks were used during lab validation:
-
-
-
-\- Verified that the Wazuh Docker containers were running.
-
-\- Checked the Windows endpoint agent connection status.
-
-\- Modified a monitored test file to generate a FIM alert.
-
-\- Reviewed SCA assessment results.
-
-\- Examined vulnerability inventory records.
-
-\- Reviewed security events in the dashboard.
-
-
-
-\## 7. Evidence
-
-
-
-Screenshots demonstrating the lab implementation and testing are available in the `screenshots/` directory.
-
-
-
-\## 8. Security Note
-
-
-
-Credentials, API keys, private certificates, and other sensitive information should not be committed to the public repository.
-
-
-
-\## 9. Project Status
-
-
-
-This is a hands-on learning project focused on understanding Wazuh deployment, endpoint monitoring, and basic security operations workflows.
+\- \*\*File Integrity Monitoring (
 

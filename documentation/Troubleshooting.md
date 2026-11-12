@@ -30,7 +30,7 @@
 
 
 
-\*\*Outcome:\*\* Dashboard became accessible.
+\*\*Outcome:\*\* The Dashboard became accessible after the Indexer completed initialization.
 
 
 
@@ -52,11 +52,19 @@
 
 
 
-\*\*Resolution:\*\* Waited for the Indexer to complete initialization and verified its cluster status.
+\*\*Resolution:\*\*
+
+\- Allowed the Indexer to complete its initialization.
+
+\- Verified that the Indexer cluster reported GREEN health.
 
 
 
-\*\*Outcome:\*\* Indexer reported GREEN cluster health.
+\*\*Outcome:\*\* The Indexer became available and the Dashboard was accessible.
+
+
+
+\*\*Note:\*\* GREEN indicates that the Indexer cluster was healthy at the time of verification. It does not represent an overall security assessment of the endpoint.
 
 
 
@@ -68,107 +76,5 @@
 
 
 
-\*\*Investigation:\*\*
-
-\- Reviewed the selected time range.
-
-\- Checked the active search query and filters.
-
-
-
-\*\*Resolution:\*\*
-
-\- Cleared restrictive filters.
-
-\- Expanded the time range to the last 30 days.
-
-\- Refreshed the event view.
-
-
-
-\*\*Outcome:\*\* Security event records became visible.
-
-
-
-\## 4. Troubleshooting Approach
-
-
-
-The following commands were useful for checking the Docker deployment:
-
-
-
-\### Check running containers
-
-
-
-```powershell
-
-docker ps
-
-```
-
-
-
-\### Check all containers
-
-
-
-```powershell
-
-docker ps -a
-
-```
-
-
-
-\### Review Dashboard logs
-
-
-
-```powershell
-
-docker logs --tail 60 single-node-wazuh.dashboard-1
-
-```
-
-
-
-\### Review Indexer logs
-
-
-
-```powershell
-
-docker logs --tail 60 single-node-wazuh.indexer-1
-
-```
-
-
-
-\### Review Manager logs
-
-
-
-```powershell
-
-docker logs --tail 60 single-node-wazuh.manager-1
-
-```
-
-
-
-\## 5. Lessons Learned
-
-
-
-\- Check service and container status before restarting components.
-
-\- Review logs to identify startup and connectivity problems.
-
-\- Allow sufficient time for services to initialize.
-
-\- Check dashboard time ranges and filters before concluding that no events exist.
-
-\- Avoid deleting Docker volumes when troubleshooting because they may contain important lab data.
+\*\*Investigation
 
