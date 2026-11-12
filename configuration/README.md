@@ -1,3 +1,5 @@
+
+
 \# Wazuh Lab Configuration Reference
 
 
@@ -10,9 +12,11 @@
 
 \- Compose project: `single-node`
 
-\- Wazuh version: 4.14.0
+\- Wazuh Manager, Indexer and Dashboard version: 4.14.0
 
 \- Environment: Docker Desktop with WSL 2
+
+\- Host operating system: Windows 11
 
 
 
@@ -52,5 +56,44 @@
 
 
 
-These are the configured service ports in the lab deployment. Actual accessibility depends on Docker
+These are the service ports used in the lab deployment. Actual accessibility depends on Docker port mappings and network configuration.
 
+
+
+\## 4. Original Configuration
+
+
+
+The original Docker Compose configuration is maintained locally in the Wazuh Docker deployment directory:
+
+
+
+`wazuh-docker/single-node/docker-compose.yml`
+
+
+
+The original configuration file is not included in this public repository because it contains sensitive configuration values.
+
+
+
+\## 5. Security Considerations
+
+
+
+\- Never commit passwords, API keys, private certificates, or other sensitive configuration values to a public repository.
+
+\- Review configuration files for sensitive information before uploading them.
+
+\- Use environment variables or secure secret-management methods for credentials.
+
+\- Keep private keys and certificates outside public repositories.
+
+\- Avoid publishing internal network details unless they are necessary for documenting the lab.
+
+
+
+\## 6. Configuration Disclaimer
+
+
+
+This document provides a reference to the lab environment and its configuration. It is not a complete, standalone Docker Compose deployment file.

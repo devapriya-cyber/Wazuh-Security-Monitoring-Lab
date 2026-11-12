@@ -1,3 +1,5 @@
+
+
 \# Wazuh Security Monitoring Lab – Troubleshooting
 
 
@@ -12,9 +14,9 @@
 
 \*\*Investigation:\*\*
 
-\- Checked the status of Docker containers using `docker ps -a`.
+\- Checked Docker container status using `docker ps -a`.
 
-\- Reviewed Dashboard logs using `docker logs`.
+\- Reviewed Dashboard logs.
 
 \- Reviewed Indexer logs to investigate connectivity and cluster status.
 
@@ -76,5 +78,112 @@
 
 
 
-\*\*Investigation
+\*\*Investigation:\*\*
 
+\- Reviewed the selected time range.
+
+\- Checked the active search query and filters.
+
+
+
+\*\*Resolution:\*\*
+
+\- Cleared restrictive filters.
+
+\- Expanded the time range to the last 30 days.
+
+\- Refreshed the event view.
+
+
+
+\*\*Outcome:\*\* Security event records became visible.
+
+
+
+\## 4. Useful Troubleshooting Commands
+
+
+
+The following PowerShell commands were used to inspect the Docker deployment.
+
+
+
+\### Check running containers
+
+
+
+```powershell
+
+docker ps
+
+```
+
+
+
+\### Check all containers
+
+
+
+```powershell
+
+docker ps -a
+
+```
+
+
+
+\### Review Dashboard logs
+
+
+
+```powershell
+
+docker logs --tail 60 single-node-wazuh.dashboard-1
+
+```
+
+
+
+\### Review Indexer logs
+
+
+
+```powershell
+
+docker logs --tail 60 single-node-wazuh.indexer-1
+
+```
+
+
+
+\### Review Manager logs
+
+
+
+```powershell
+
+docker logs --tail 60 single-node-wazuh.manager-1
+
+```
+
+
+
+\## 5. Lessons Learned
+
+
+
+\- Check service and container status before restarting components.
+
+\- Review logs to identify startup and connectivity problems.
+
+\- Allow sufficient time for services to initialize.
+
+\- Check dashboard time ranges and filters before concluding that no events exist.
+
+\- Avoid deleting Docker volumes when troubleshooting because they may contain important lab data.
+
+\- Review container configuration and logs before making changes to the deployment.
+
+
+
+\*\*Important:\*\* Avoid running commands that remove containers, images, or Docker volumes unless you understand their impact and have backed up important lab data.
